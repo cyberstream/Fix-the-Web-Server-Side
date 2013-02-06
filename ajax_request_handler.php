@@ -417,7 +417,7 @@ if (isset($_GET) && count($_GET)) {
             $stmt->bind_param("i",$id);
         }
         $q = $stmt->execute();
-	var_dump($stmt);
+      	var_dump($stmt);
         if ($q && ($stmt->affected_row || $stmt->insert_id))
           exit ('true');
         else
