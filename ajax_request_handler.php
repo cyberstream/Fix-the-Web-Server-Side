@@ -389,7 +389,39 @@ if (isset($_GET) && count($_GET)) {
         exit;
     } else if($_GET["mode"]=="follow"){
         if (!isset($_GET['id']) || !(settype($_GET['id'],"int"))) 
-             exit ("Please make sure what you want to follow is on the web site");
+          exit ("Please make sure what you want to follow is on the web site");
+	if(!$FixTheWeb->isAuthed())
+	  exit ("Please sign in");
+
+        $stmt = $db->stmt_init();
+
+        $query = "SELECT id,rating FROM ratings WHERE username=? AND rating=0 AND id_foreign_key=?";
+        $stmt->prepare($query);
+        $stmt->bind_param('si',$FixTheWeb->userdata->screen_name,$_GET['id']);
+
+        $q = $stmt->execute();
+        $stmt->bind_result($id,$rating);
+
+        $stmt->fetch();
+        var_dump($stmt);
+
+        $stmt->free_result();
+        $stmt = $db->stmt_init();
+        if ($id==null) {
+            $query = "INSERT INTO ratings (id_foreign_key,username,is_read,rating) VALUES (?,?,1,0)";
+            $stmt->prepare($query);
+            $stmt->bind_param("is",$_GET['id'],$FixTheWeb->userdata->screen_name);
+        } else {
+            $query = "DELETE FROM ratings WHERE id=?";
+            $stmt->prepare($query);
+            $stmt->bind_param("i",$id);
+        }
+        $q = $stmt->execute();
+	var_dump($stmt);
+        if ($q && ($stmt->affected_row || $stmt->insert_id))
+          exit ('true');
+        else
+          exit ('An error occured');
     } else if($_GET["mode"]=="like"){
         if (!isset($_GET['id']) || !(settype($_GET['id'],"int"))) 
              exit ("Please make sure what you want to like is on the web site");

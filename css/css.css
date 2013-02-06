@@ -1,10 +1,9 @@
         body {
-            font-family:arial, "lucida grande", "lucida sans unicode", "bitstream vera sans", "dejavu sans", "trebuchet ms", sans-serif;
+            font-family: "arial", "lucida sans unicode", "bitstream vera sans", "dejavu sans", "trebuchet ms", sans-serif;
             font-size:1em;
             margin:0;
             padding:0;
             color:#222;
-            
         }
         a,a:link{
             color:rgb(51, 153, 255);
@@ -85,7 +84,7 @@
             background: -webkit-linear-gradient(top, #9ACD32, #74a412) transparent;
             background: -ms-linear-gradient(top, #9ACD32, #74a412) transparent;
             background: -moz-linear-gradient(top, #9ACD32, #74a412) transparent;
-            background: linear-gradient(top, #9ACD32, #74a412) transparent;
+            background: linear-gradient(to bottom, #9ACD32, #74a412) transparent;
             box-shadow: 0px 0px 1px #000;
             border-radius:2px;
             text-align:center;
@@ -156,7 +155,7 @@
             background: -moz-linear-gradient(top, #3CA0FF, #288CFA) transparent;
             background: -webkit-linear-gradient(top, #3CA0FF, #288CFA) transparent;
             background: -ms-linear-gradient(top, #3CA0FF, #288CFA) transparent;
-            background: linear-gradient(top, #3CA0FF, #288CFA) transparent;
+            background: linear-gradient(to bottom, #3CA0FF, #288CFA) transparent;
             box-shadow: 0px 0px 1px #000;
             border-radius:2px;
             text-align:center;
@@ -184,12 +183,11 @@
             margin:0;
         }
         #most-popular-reports,#most-followed-reports,#prev,#forw{
-            
             background: -o-linear-gradient(top, #3CA0FF, #288CFA) transparent;
             background: -ms-linear-gradient(top, #3CA0FF, #288CFA) transparent;
             background: -webkit-linear-gradient(top, #3CA0FF, #288CFA) transparent;
             background: -moz-linear-gradient(top, #3CA0FF, #288CFA) transparent;
-            background: linear-gradient(top, #3CA0FF, #288CFA) transparent;
+            background: linear-gradient(to bottom, #3CA0FF, #288CFA) transparent;
             box-shadow: 0px 0px 1px #000;
             border-radius:2px;
             text-align:center;
@@ -212,7 +210,6 @@
             margin:1px;
             font-size:1.4em;
         }
-        
 #error {
     background:#ffdbdb; 
     border:1px solid #dd5959;
@@ -246,9 +243,9 @@
     background: -moz-linear-gradient(bottom, rgba(240, 240, 240, 0.298), #AFAFAF 40px);
     background: -webkit-linear-gradient(bottom, rgba(240, 240, 240, 0.298), #AFAFAF 40px);
     background: -ms-linear-gradient(bottom, rgba(240, 240, 240, 0.298), #AFAFAF 40px);
-    background: linear-gradient(bottom, rgba(240, 240, 240, 0.298), #AFAFAF 40px);
+    background: linear-gradient(to top, rgba(240, 240, 240, 0.298), #AFAFAF 40px);
     color: #333;
-    text-shadow: 0 1px 1px #ccc; 
+    text-shadow: 0 1px 1px #ccc;
     box-shadow: 0 0 10px #777;
 }
 
@@ -273,7 +270,7 @@
    background: -moz-linear-gradient(bottom, #D11219, #E82727 40px);
    background: -webkit-linear-gradient(bottom, #D11219, #E82727 40px);
    background: -ms-linear-gradient(bottom, #D11219, #E82727 40px);
-   background: linear-gradient(bottom, #D11219, #E82727 40px);
+   background: linear-gradient(to top, #D11219, #E82727 40px);
 
 }
 iframe{

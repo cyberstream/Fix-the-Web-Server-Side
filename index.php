@@ -83,6 +83,6 @@ if ($logged_in) {
                 </ul>
             </div>
         </aside>
-        <script type="text/javascript" src="js/js.min.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
     </body>
 </html>
