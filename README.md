@@ -1,12 +1,18 @@
-#Server Side Files for "Fix the Web"
+## THIS PROJECT HAS BEEN DISCONTINUED
+
+**Update (March 2, 2022)**: As a group of developers who met through the Opera Browser community, we originally started this project with plans to patch malformed web pages that were improperly rendered when using Opera Presto. Before this project was completed, Opera migrated its rendering engine to Chromium, eliminating most of these rendering issues. 
+
+***
+
+## Server Side Files for "Fix the Web"
 
 This repository contains the server-side files for the [Fix the Web](http://github.com/cyberstream/Fix-the-Web) Opera extension project.
 
-*ajax_request_handler.php* handles for AJAX requests from the extension. All exported data is printed instead of returned because it is used by AJAX.
-*index.php* is the home page of this extension.
-*db.php* is the configuration file for the MySQL database.
+* *ajax_request_handler.php* handles for AJAX requests from the extension. All exported data is printed instead of returned because it is used by AJAX.
+* *index.php* is the home page of this extension.
+* *db.php* is the configuration file for the MySQL database.
 
-##Configuration
+## Configuration
 
 In order to test the extension locally, there are a couple things that must be initialized or configured.
 
@@ -18,7 +24,7 @@ In order to test the extension locally, there are a couple things that must be i
 
 Now *Fix the Web* should run just fine!
 
-##Links
+## Links
 Install the lastest stable version in the [Opera addons catalog](https://addons.opera.com/en/addons/extensions/details/fix-the-web/)
 
 [Offical blog](http://my.opera.com/fix-the-web/blog/) - [Official forums](http://my.opera.com/fix-the-web/forums/)
